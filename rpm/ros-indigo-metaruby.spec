@@ -10,7 +10,15 @@ Source0:        %{name}-%{version}.tar.gz
 AutoProv:       0
 Requires:       ros-indigo-catkin
 Requires:       ros-indigo-utilrb
+Requires:       ruby
+Requires:       ruby-devel
+Requires:       openssl-devel
+Requires:       rubygems
 BuildRequires:  cmake
+BuildRequires:  ruby
+BuildRequires:  ruby-devel
+BuildRequires:  openssl-devel
+BuildRequires:  rubygems
 
 %description
 Modelling using the Ruby language as a metamodel
@@ -47,6 +55,8 @@ make %{?_smp_mflags} install DESTDIR=%{buildroot}
 
 %files
 /opt/ros/indigo
+%{_datadir}/ruby/metaruby.rb
+%{_datadir}/ruby/metaruby
 
 %changelog
 * Wed Nov 05 2014 Orocos Development Team <orocos-dev@lists.mech.kuleuven.be> - 1.0.0-1
